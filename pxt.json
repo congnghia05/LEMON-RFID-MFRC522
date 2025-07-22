@@ -1,5 +1,5 @@
 {
-    "name": "emakefun_rfid",
+    "name": "Lemon_rfid_RC522",
     "description": "",
     "dependencies": {
         "core": "*",
