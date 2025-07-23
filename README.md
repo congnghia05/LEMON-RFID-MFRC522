@@ -1,24 +1,53 @@
 
-> Open this page at [https://congnghia05.github.io/lemon-rfid-mfrc522/](https://congnghia05.github.io/lemon-rfid-mfrc522/)
+## Initialize RFID RFMC522 I2C module
 
-## Use as Extension
+The RFID module needs to be initialized before it is ready to use.
 
-This repository can be added as an **extension** in MakeCode.
+```typescript
+// Initialize RIFD module
+MFRC522.Init()
+```
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/congnghia05/lemon-rfid-mfrc522** and import
+## Read ID from card
 
-## Edit this project
+This function reads the cards unique ID and returns it.
 
-To edit this repository in MakeCode.
+```typescript
+// Read unique ID
+MFRC522.getID()
+```
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/congnghia05/lemon-rfid-mfrc522** and click import
+## Read data from card
 
-#### Metadata (used for search, rendering)
+Data stored on the card can be retrieved with this function.
+
+```typescript
+// Read data
+MFRC522.read()
+```
+
+## Write data to card
+
+Write data, formatted as string, to the card.
+
+```typescript
+// Write data
+MFRC522.write("1234")
+```
+
+## Turn off antenna
+
+After use, the antenn can be turned off.
+
+```typescript
+// Turn antenna off
+MFRC522.AntennaOff()
+```
+
+## Supported targets
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+## License
+
+MIT
